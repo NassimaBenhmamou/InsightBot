@@ -1,0 +1,15 @@
+# Environnements
+venv/
+.env
+
+# Data
+data/
+*.csv
+*.xlsx
+
+# Python
+__pycache__/
+*.pyc
+
+# Streamlit cache
+.streamlit/
