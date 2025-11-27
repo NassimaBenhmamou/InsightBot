@@ -208,6 +208,7 @@ Ce projet est sous licence MIT - voir le fichier [LICENSE](LICENSE) pour plus de
 ## 👥 Auteurs
 
 - **Nassima Benhmamou** - *Développeuse principale* - [GitHub](https://github.com/NassimaBenhmamou)
+- **Sanae Achahboun** - *Développeuse principale* - [GitHub](https://github.com/Achahboun-Sanae)
 
 ## 🙏 Remerciements
 
