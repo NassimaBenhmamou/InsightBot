@@ -1,5 +1,6 @@
 # Environnements
 venv/
+.venv/
 .env
 
 # Data
