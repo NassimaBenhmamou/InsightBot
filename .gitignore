@@ -3,6 +3,7 @@ venv/
 .venv/
 .env
 
+check_structure.py
 # Data
 data/
 *.csv
