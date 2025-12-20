@@ -3,6 +3,7 @@ venv/
 .venv/
 .env
 
+test/
 check_structure.py
 # Data
 data/
