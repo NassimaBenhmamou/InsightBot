@@ -53,7 +53,7 @@
 ## 📦 Installation
 
 ### Prérequis
-- 🐍 **Python 3.8+**
+- 🐍 **Python 3.8 à 3.11** (Éviter Python 3.12 pour l'instant en raison de problèmes de compatibilité des bibliothèques)
 - 📦 **Git**
 - 🌐 **Connexion Internet** (pour OpenAI GPT)
 
