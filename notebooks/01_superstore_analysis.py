@@ -8,14 +8,17 @@ from plotly.subplots import make_subplots
 import warnings
 warnings.filterwarnings('ignore')
 
+from pathlib import Path
+from src.core.data_processor import DataCleaner
+
 # Style pour les plots
 plt.style.use('seaborn-v0_8')
 sns.set_palette("husl")
 
 class AdvancedSuperstoreAnalyzer:
     def __init__(self):
-        self.base_path = r"C:\Users\NASSIMA\insightbot"
-        self.data_path = f"{self.base_path}/data/raw"
+        self.project_root = Path(__file__).parent.parent
+        self.data_cleaner = DataCleaner()
         self.datasets = {}
         self.cleaned_data = {}
         
