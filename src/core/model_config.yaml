@@ -1,0 +1,87 @@
+# =============================================
+# HYPERPARAMÈTRES DES MODÈLES OLLAMA (CORRIGÉS)
+# =============================================
+
+models:
+  # 1. Ton meilleur modèle local pour le code (Déjà installé)
+  qwen2.5-coder:7b:
+    timeout: 45        # Augmenté car le 7b peut être lent à charger
+    num_predict: 500
+    temperature: 0.0   # 0.0 pour plus de précision SQL
+    top_p: 0.9
+    priority: 1
+
+  # 2. Le petit nouveau (À installer) - Très logique
+  phi3:mini:
+    timeout: 20
+    num_predict: 300
+    temperature: 0.1
+    top_p: 0.9
+    priority: 2
+
+  # 3. Ton modèle polyvalent (Déjà installé)
+  llama3.2:latest:
+    timeout: 30
+    num_predict: 400
+    temperature: 0.1
+    top_p: 0.9
+    priority: 3
+
+  # 4. Le plus léger (Déjà installé) - Rapide mais moins précis
+  gemma2:2b:
+    timeout: 15
+    num_predict: 250
+    temperature: 0.1
+    top_p: 0.9
+    priority: 4
+
+# =============================================
+# CONFIGURATION GÉNÉRALE
+# =============================================
+
+general:
+  default_temperature: 0.1
+  default_top_p: 0.9
+  default_max_tokens: 2000
+  default_timeout: 30
+
+# =============================================
+# CONFIGURATION DU BASCULEMENT (FALLBACK)
+# =============================================
+
+switching:
+  max_retries_per_model: 2
+  fallback_strategy: "progressive" # On passe du plus fort au plus rapide
+  enable_data_aware_fallback: true
+  cache_responses: true
+  cache_ttl: 3600
+
+# =============================================
+# CONFIGURATION DES TIMEOUTS RÉSEAU
+# =============================================
+
+timeouts:
+  connection: 30
+  read: 120
+  write: 50
+  total: 240
+
+# =============================================
+# LOGGING ET MONITORING
+# =============================================
+
+logging:
+  level: "INFO"
+  log_file: "logs/ai_provider.log"
+  metrics:
+    track_response_times: true
+    track_errors: true
+
+# =============================================
+# CONFIGURATION DES DONNÉES
+# =============================================
+
+data:
+  csv_sample_size: 1000
+  max_file_size_mb: 100
+  allowed_extensions: [".csv", ".json", ".parquet"]
