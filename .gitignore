@@ -13,6 +13,6 @@ data/
 # Python
 __pycache__/
 *.pyc
-
+.vscode/
 # Streamlit cache
 .streamlit/
